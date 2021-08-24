@@ -1,0 +1,434 @@
+
+img {
+  /* display: block; */
+ vertical-align: top;    /*解决图片地测有空白缝隙的问题 */
+}
+
+.w {
+  /* 版心公共类 */
+  width: 1190px; /*京东版心是1190  */
+  margin: 0 auto; /*居中对齐 */
+}
+
+/*定义左边浮动 公共使用类  */
+.fl {
+  float: left;
+}
+/*定义右边浮动 公共使用类*/
+.fr {
+  float: right;
+}
+
+/* 定义所有的a */
+a {
+  text-decoration: none; /*取消下划线 */
+  font-size: 12px; /*定义所有a连接里面的字体大小 */
+  color: #999; /*所有a连接里字体颜色 */
+}
+
+/* 定义左右a连接里的字体颜色 鼠标移动到该字体时改变为该颜色 */
+a:hover {
+  color: #c81623;
+}
+
+/* 清楚外边距 内边距*/
+blockquote,
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+  margin: 0; /*外边距 */
+  padding: 0; /*元素内边距 */
+}
+
+input,
+button {
+  border: 0px;
+  outline: 0px; /*取消轮廓边框 */
+}
+
+ul {
+  list-style: none; /*清除小列表的样式*/
+}
+
+/* 定义整个页面的背景色 */
+body {
+  background-color: #f6f6f6;
+}
+
+/* 单独定义一个颜色 可以给一些需要特色颜色的文字引用该颜色 比如：免费注册 */
+.f10 {
+  color: #f10215 !important;
+}
+
+@font-face {
+  /*声名字体 */
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?1x1j55");
+  src: url("../fonts/icomoon.eot?1x1j55#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?1x1j55") format("truetype"),
+    url("../fonts/icomoon.woff?1x1j55") format("woff"),
+    url("../fonts/icomoon.svg?1x1j55#icomoon") format("svg");
+  font-weight: normal; /*让加粗的不加粗 */
+  font-style: normal; /*让倾斜的不倾斜 */
+}
+
+/* header最上面黑色广告图片部分 */
+header {
+  height: 80px;
+  /* 背景色 */
+  background-color: #020000;
+}
+
+/* 快速导航栏 begin */
+.shortcut {
+  height: 30px;
+  line-height: 30px; /* 字体行高等于导航栏行高等于居中 */
+  /*导航栏背景色 */
+  background-color: #e3e4e5;
+  /* 导航栏背景色下加一条比较深色的线 */
+  border-bottom: 1px solid #ddd;
+}
+
+.city {
+  margin-left: 200px;
+}
+
+.shortcut li {
+  float: left; /*导航栏里的li 全部左浮动 */
+}
+
+.shortcut i {
+  font-family: "icomoon";
+  font-style: normal;
+  color: #ccc;
+}
+
+/* 导航栏小竖线 宽 高 颜色 */
+.space {
+  width: 1px;
+  height: 10px;
+  background-color: #ccc;
+  margin: 10px 12px 0; /*  元素的上边距是10  左右边距是12  下边距是0*/
+}
+
+.mobile {
+  position: relative; /* 定位父元素*/
+}
+
+.mobile img {
+  position: absolute; /*绝对定位 */
+  left: -3px;
+  top: 24px;
+  border: 1px solid #ccc; /*定义边框的 宽高颜色 */
+  padding: 3px; /* 长宽高 定义元素内边距 */
+}
+/* 快速导航栏 over */
+
+/* 导航栏下来的中间部分 */
+.middle {
+  height: 140px;
+  /* background-color:red; */
+  position: relative; /*父元素定位 和下面logo absolute联合使用   因为logo 是在这个版块中*/
+}
+
+.logo {
+  position: absolute; /*绝对定位 */
+  top: -30px;
+  left: 0;
+  box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.3); /*给logo 添加一下外阴影颜色 */
+}
+
+.logo a {
+  display: block; /*转成块元素 */
+  width: 190px;
+  height: 170px;
+  background: #fff url(../images/logo.png) no-repeat; /* no-repeat 不会出现平铺或者重复现象*/
+}
+
+/* 搜索栏宽高 */
+.form {
+  width: 550px;
+  height: 35px;
+  background-color: pink;
+  position: absolute;
+  top: 25px;
+  left: 320px;
+}
+
+/* input 颜色 边框 */
+.form input {
+  width: 495px;
+  height: 33px;
+  border: 1px solid #f10215;
+  float: left;
+  font-size: 14px;
+  padding-left: 3px;
+}
+
+/* button 颜色 背景色 */
+.form button {
+  width: 50px;
+  height: 35px;
+  background-color: #f10215;
+  float: left;
+}
+
+.form button i {
+  font-family: "icomoon";
+  font-style: normal;
+  color: #fff;
+}
+
+/* 购物车 */
+.shopCar {
+  width: 188px;
+  height: 33px;
+  line-height: 33px;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 25px;
+  right: 95px;
+  background-color: #fff;
+  text-align: center; /* 居中 */
+  color: #f10215;
+}
+
+.shopCar i {
+  font-family: "icomoon";
+  font-style: normal;
+  margin-right: 5px;
+}
+
+.shopCar span {
+  width: 15px;
+  height: 15px;
+  background-color: #f10215;
+  border-radius: 50%;
+  position: absolute; /* 加了绝对定位  固定定位  浮动的行内元素 可以不用转换为块元素,直接给宽高即可 */
+  top: 5px;
+  right: 30px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 15px;
+}
+
+/* 关键词模块 */
+.hotwords {
+  position: absolute;
+  top: 68px;
+  /* top: 0px;  */
+  left: 320px;
+}
+
+/* <!-- 小导航部分 --> */
+.navitems {
+  width: 770px;
+  height: 40px;
+  /* background-color: purple; */
+  position: absolute;
+  bottom: 0;
+  left: 200px;
+  line-height: 40px;
+}
+
+.navitems li {
+  float: left;
+  margin-left: 30px;
+}
+
+.navitems li a {
+  font-size: 16px;
+  font-weight: 700px;
+  color: #555;
+}
+
+/*  a:hover   当监听到鼠标移动该元素a标签时 会套用定义hover的样式 */
+.navitems li a:hover {
+  color: #f10215;
+}
+/* .navitems 里面的space  */
+.navitems .space {
+  /* margin-top: 15px;
+    margin-left: 15px;
+    margin-right: -15px; */
+  margin: 15px -15px 0 15px;
+}
+
+/* 超级日 */
+.super {
+  position: absolute;
+  bottom: 0; /*该属性定义了定位元素下外边距边界与其包含块下边界之间的偏移 */
+  right: 0;
+}
+
+/* 页面底部 */
+footer {
+    margin-top: 35px;
+    height: 500px;
+    background-color: #eaeaea;
+}
+
+footer a{
+  color: #666;
+}
+.service {
+    /* height: 102px; */
+    padding: 30px 0;
+    border-bottom: 1px solid #dedede;
+    overflow: hidden;
+}
+
+.service ul  li {
+  width: 297px;
+  height: 43px;
+  /* background-color: purple; */
+  position: relative;
+  line-height: 43px;
+  float: left;
+}
+
+.service li h5 {
+  position: absolute;
+  top: 0;
+  left: 38px;
+  width: 36px;
+  height: 43px;
+  /* background-color: skyblue; */
+  background: url(../images/ico.png) no-repeat;
+  text-indent: -999em;
+}
+
+.service li:nth-child(2) h5 {
+  background-position: 0 -43px;
+}
+
+.service li:nth-child(3) h5 {
+  background-position: 0 -86px;
+}
+
+.service li:nth-child(4) h5 {
+  background-position: bottom;
+}
+.service li p {
+  font-weight: 700px;
+  margin-left: 82px;
+}
+
+
+/* 帮助模块 */
+.help {
+  height: 200px;
+  border-bottom: 1px solid #dedede;
+  padding-top: 25px;
+  box-sizing: border-box;
+
+}
+
+.help dl {
+  width: 192px;
+  float: left;
+}
+.help dt,
+.coverage h5 {
+  height: 30px;
+  font-size: 14px;
+  color: #666;
+}
+.help dd {
+  height: 22px;
+
+}
+
+/* 范围 */
+.coverage {
+  width: 200px;
+  height: 150px;
+  background: url(../images/ico_footer.png) no-repeat;
+
+
+}
+.coverage h5 {
+  padding-left: 35px;
+}
+.coverage p {
+  font-size: 12px;
+  color: #666 ;
+  line-height: 18px;
+  width: 180px;
+}
+
+.coverage a{
+  display: block;
+  margin-top: 5px;
+  width: 180px;
+  text-align: right;
+}
+
+/* 底部版权 */
+.copyright {
+  padding-top: 20px;
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+} 
+
+.copyright space {
+  margin: 0 10px;
+}
+.copyright a {
+  color: #666;
+  
+}
+
+.copyright div {
+  margin-top: 20px;
+}
+.copyright div p {
+ line-height: 22px;      /*   行高 */
+}
+
+.foot-icon a {
+  display: inline-block;
+  width: 103px;
+  height: 33px;
+  background: url(../images/ico_footer.png) no-repeat 0 -150px;
+  margin: 20px 4px 0px;
+  /* 行内块可以用text-align:center 来实现居中 */
+}
+.foot-icon a:nth-child(2) {
+  background-position: -103px -150px;
+}
+
+.foot-icon a:nth-child(3) {
+  background-position: -0px -183px;
+}
+.foot-icon a:nth-child(4) {
+  background-position: -103px -183px;
+}
+.foot-icon a:nth-child(5) {
+  background-position: -0px -216px;
+}
+.foot-icon a:nth-child(6) {
+  background-position: -103px -216px;
+}
